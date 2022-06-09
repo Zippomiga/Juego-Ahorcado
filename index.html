@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Imagenes/Horca1.ico">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <h1>Juego del Ahorcado</h1>
+    <div class="pizarra-acciones">
+        <canvas width="600" height="400"></canvas>
+        <div class="acciones">
+            <div class="botones">
+                <button class="nueva-palabra">Nueva Palabra</button>
+                <button class="rendirse">Rendirse</button>
+            </div>
+            <div class="keywords">
+                <ul class="lista-letras">
+                    <li class="letra" id="A">A</li>
+                    <li class="letra" id="B">B</li>
+                    <li class="letra" id="C">C</li>
+                    <li class="letra" id="D">D</li>
+                    <li class="letra" id="E">E</li>
+                    <li class="letra" id="F">F</li>
+                    <li class="letra" id="G">G</li>
+                    <li class="letra" id="H">H</li>
+                    <li class="letra" id="I">I</li>
+                    <li class="letra" id="J">J</li>
+                    <li class="letra" id="K">K</li>
+                    <li class="letra" id="L">L</li>
+                    <li class="letra" id="M">M</li>
+                    <li class="letra" id="N">N</li>
+                    <li class="letra" id="Ñ">Ñ</li>
+                    <li class="letra" id="O">O</li>
+                    <li class="letra" id="P">P</li>
+                    <li class="letra" id="Q">Q</li>
+                    <li class="letra" id="R">R</li>
+                    <li class="letra" id="S">S</li>
+                    <li class="letra" id="T">T</li>
+                    <li class="letra" id="U">U</li>
+                    <li class="letra" id="V">V</li>
+                    <li class="letra" id="W">W</li>
+                    <li class="letra" id="X">X</li>
+                    <li class="letra" id="Y">Y</li>
+                    <li class="letra" id="Z">Z</li>
+                </ul>
+            </div>
+            <span class="intentos-restantes">Palito está a punto de ser ahorcado. Por favor, sálvalo!</span>
+            <span class="palabra"></span>
+        </div>
+    </div>
+
+    <footer>
+        <div class="copyright">
+            <p>&#169; Valentin Di Geronimo - 2022</p>
+        </div>
+        <div class="redes">
+            <a href="https://github.com/Zippomiga" target="_blank"><img class="imgRedes" src="Imagenes/IconoGithub.png" alt="Github"></a>
+            <a href="https://www.linkedin.com/in/digeronimovalentin/" target="_blank"><img class="imgRedes" src="Imagenes/IconoLinkedin.png" alt="Linkedin"></a>
+            <a href="https://api.whatsapp.com/send?phone=541168904100&text=%20" target="_blank"><img class="imgRedes" src="Imagenes/IconoWhatsApp.png" alt="WhatsApp"></a>
+            <a href="mailto:digeronimovalentin@gmail.com" target="_blank"><img class="imgRedes" src="Imagenes/IconoGmail.png" alt="Gmail"></a>
+        </div>
+    </footer>
+    <script src="canvas.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

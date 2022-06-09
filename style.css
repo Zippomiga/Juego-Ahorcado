@@ -1,0 +1,214 @@
+#body {
+    background-color: rgb(15, 15, 15);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: default;
+}
+
+h1 {
+    border: 2px solid black;
+    margin: auto;
+    padding: 4px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+
+.pizarra-acciones {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 90%;
+}
+
+canvas {
+    margin: 10px 0;
+    border: 1px dashed white;
+}
+
+.acciones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 16px;
+}
+
+.botones {
+    display: flex;
+}
+
+.botones button {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.nueva-palabra:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nueva-palabra:active {
+    background-color: orange;
+}
+
+.rendirse:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.rendirse:active {
+    background-color: rgb(200, 0, 0);
+}
+
+.keywords {
+    text-align: center;
+    padding: 4px;
+    background-color: white;
+}
+
+.keywords li {
+    display: inline-flex;
+    justify-content: center;
+    width: 40px;
+    margin: 4px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    list-style: none;
+    cursor: pointer;
+}
+
+
+
+.palabra {
+    display: block;
+    margin: 20px 0 0 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.letra {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+li:hover {
+    border-color: black;
+    transform: scale(1.1);
+}
+
+li:active {
+    background-color: black;
+    color: white;
+}
+
+li::selection {
+    background: none;
+}
+
+footer {
+    border: 1px solid black;
+    margin: 40px auto auto auto;
+    padding: 4px;
+    background-color: black;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.copyright {
+    margin-top: 10px;
+}
+
+.imgRedes {
+    width: 40px;
+    height: auto;
+    margin: 20px 20px 0;
+    transition: 0.2s all;
+    filter: invert();
+}
+
+.imgRedes:hover {
+    transform: scale(1.2);
+}
+
+/* JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS */
+.letra-correcta {
+    border: none;
+    background-color: rgb(160, 255, 160);
+    color: rgb(0, 180, 0);
+    pointer-events: none;
+}
+
+.letra-incorrecta {
+    border: none;
+    background-color: rgb(255, 130, 130);
+    color: rgb(200, 0, 0);
+    pointer-events: none;
+}
+
+.letra-bloqueada {
+    pointer-events: none;
+    border: 1px solid gray;
+    color: gray;
+}
+
+.intentos-restantes {
+    margin: 16px 0 0 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 22px;
+}
+
+.campo-letras {
+    width: 40px;
+    padding: 10px;
+    margin: 1px;
+    text-align: center;
+    border: none;
+    resize: none;
+    pointer-events: none;
+}
+
+.palabra-ahorcado-bien {
+    width: 40px;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    resize: none;
+    pointer-events: none;
+    background-color: rgb(160, 255, 160);
+    color: rgb(0, 180, 0);
+}
+
+.palabra-ahorcado-mal {
+    width: 40px;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    resize: none;
+    pointer-events: none;
+    background-color: rgb(255, 130, 130);
+    color: rgb(200, 0, 0);
+}
+
+/* MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA */
+
+@media screen and (max-width: 850px) {
+    .pizarra-acciones {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .acciones {
+        margin: 0;
+    }
+}
