@@ -94,7 +94,7 @@ function introducirLetras(key) {
                     camposPalabra.childNodes[i].value = palabraSecreta[i];
                     camposPalabra.childNodes[i].classList.replace("campo-letras", "palabra-ahorcado-bien");
                     filtro = "";
-                    intentosRestantesHTML.innerHTML = "Salvaste a Palito. Muchas Gracias 🙏❤ ";
+                    intentosRestantesHTML.innerHTML = "❤ Salvaste a Palito. Muchas Gracias ❤ ";
                     inhabilitarTeclado();
                     limpiarPantalla();
                     dibujarSalvado();
