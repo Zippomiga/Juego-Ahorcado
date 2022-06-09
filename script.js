@@ -12,14 +12,15 @@ var campoLetra;
 
 var botonNuevaPalabra = document.querySelector(".nueva-palabra");
 botonNuevaPalabra.addEventListener('click', function() {
-    
-    botonRendirse.classList.remove("botonOff");
+
+    palabraSecreta = palabraRandom[Math.floor(Math.random() * palabraRandom.length)];
     letrasPalabraSecreta = 0;
     intentos = 0;
     intentosRestantes = 8;
     intentosRestantesHTML.innerHTML = "Intentos restantes: " + intentosRestantes;
     filtro = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
     camposPalabra = document.querySelector(".palabra");
+    botonRendirse.classList.remove("botonOff");
 
     limpiarPantalla();
     dibujarBaseHorca();
@@ -27,9 +28,7 @@ botonNuevaPalabra.addEventListener('click', function() {
 
     while(camposPalabra.firstChild) {
         camposPalabra.removeChild(camposPalabra.lastChild);
-    }
-    
-    palabraSecreta = palabraRandom[Math.floor(Math.random() * palabraRandom.length)];
+    }    
 
     for(var i = 0; i < palabraSecreta.length; i++) {
         campoLetra = document.createElement("input");
@@ -37,6 +36,8 @@ botonNuevaPalabra.addEventListener('click', function() {
         camposPalabra.appendChild(campoLetra);
     }
 });
+
+
 
 function rendirseOff() {
     botonRendirse.classList.add("botonOff");
@@ -133,6 +134,14 @@ function introducirLetras(key) {
 
 
 
+function mostrarPalabraSecreta() {
+    for(var i = 0; i < palabraSecreta.length; i++) {
+        camposPalabra.childNodes[i].value = palabraSecreta[i];
+        camposPalabra.childNodes[i].classList.replace("campo-letras", "palabra-ahorcado-mal");
+    }
+}
+
+
 var letrasTeclado = document.querySelector(".lista-letras").childNodes;
 
 function habilitarTeclado() {
@@ -145,13 +154,4 @@ function inhabilitarTeclado() {
     letrasTeclado.forEach(element => {
         element.className = "letra-bloqueada";
     });
-}
-
-
-
-function mostrarPalabraSecreta() {
-    for(var i = 0; i < palabraSecreta.length; i++) {
-        camposPalabra.childNodes[i].value = palabraSecreta[i];
-        camposPalabra.childNodes[i].classList.replace("campo-letras", "palabra-ahorcado-mal");
-    }
 }
