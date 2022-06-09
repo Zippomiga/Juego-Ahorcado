@@ -8,23 +8,23 @@ var intentosRestantesHTML = document.querySelector(".intentos-restantes");
 var filtro;
 var camposPalabra;
 var campoLetra;
-dibujarBaseHorca()
+
 
 var botonNuevaPalabra = document.querySelector(".nueva-palabra");
 botonNuevaPalabra.addEventListener('click', function() {
     
+    botonRendirse.classList.remove("botonOff");
     letrasPalabraSecreta = 0;
     intentos = 0;
     intentosRestantes = 8;
-
     intentosRestantesHTML.innerHTML = "Intentos restantes: " + intentosRestantes;
-    
     filtro = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
     camposPalabra = document.querySelector(".palabra");
+
     limpiarPantalla();
     dibujarBaseHorca();
     habilitarTeclado();
-    
+
     while(camposPalabra.firstChild) {
         camposPalabra.removeChild(camposPalabra.lastChild);
     }
@@ -34,19 +34,22 @@ botonNuevaPalabra.addEventListener('click', function() {
     for(var i = 0; i < palabraSecreta.length; i++) {
         campoLetra = document.createElement("input");
         campoLetra.classList.add("campo-letras");
-        camposPalabra.appendChild(campoLetra);       
+        camposPalabra.appendChild(campoLetra);
     }
 });
 
-
+function rendirseOff() {
+    botonRendirse.classList.add("botonOff");
+}
 
 var botonRendirse = document.querySelector(".rendirse");
 botonRendirse.addEventListener('click', function() {
 
-    intentosRestantesHTML.innerHTML = "NOO mataste a Palito! 😱😳"
+    intentosRestantesHTML.innerHTML = "NOO mataste a Palito! <br> 😱😳"
     inhabilitarTeclado();
     mostrarPalabraSecreta();
     dibujarAhorcado();
+    rendirseOff();
 });
 
 
@@ -94,8 +97,9 @@ function introducirLetras(key) {
                     camposPalabra.childNodes[i].value = palabraSecreta[i];
                     camposPalabra.childNodes[i].classList.replace("campo-letras", "palabra-ahorcado-bien");
                     filtro = "";
-                    intentosRestantesHTML.innerHTML = "❤ Salvaste a Palito. Muchas Gracias ❤ ";
+                    intentosRestantesHTML.innerHTML = "Salvaste a Palito. Muchas Gracias <br> 🤗🤗🤗";
                     inhabilitarTeclado();
+                    rendirseOff();
                     limpiarPantalla();
                     dibujarSalvado();
                 }                
@@ -120,8 +124,9 @@ function introducirLetras(key) {
         if(intentos == 8) {
             inhabilitarTeclado();
             mostrarPalabraSecreta();
+            rendirseOff();
             filtro = "";
-            intentosRestantesHTML.innerHTML = "Palito fue ahorcado 😰🥺";
+            intentosRestantesHTML.innerHTML = "Palito fue ahorcado <br> 😰🥺";
         }            
     }              
 }

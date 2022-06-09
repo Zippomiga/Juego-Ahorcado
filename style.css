@@ -201,6 +201,10 @@ footer {
     color: rgb(200, 0, 0);
 }
 
+.botonOff {
+    pointer-events: none;
+}
+
 /* MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA */
 
 @media screen and (max-width: 850px) {
