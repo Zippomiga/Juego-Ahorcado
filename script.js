@@ -61,6 +61,7 @@ var keyLetra = document.querySelectorAll(".letra");
 
         var key = event.target.textContent;
         introducirLetras(key);
+        filtro = filtro.replace(key, '');
     });
 });
 
