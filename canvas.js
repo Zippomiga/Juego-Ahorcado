@@ -160,18 +160,18 @@ function dibujarSalvado() {
     pincel.stroke();
 }
 
-function dibujarCanvas(intentos) {
-    switch(intentos) {
+function dibujarCanvas(intentosRestantes) {
+    switch(intentosRestantes) {
         
-        case 1:
+        case 7:
             dibujarHorca();           
             break;
     
-        case 2:
+        case 6:
             dibujarCabeza();
             break;
     
-        case 3:
+        case 5:
             dibujarCuerpo();
             break;
             
@@ -179,19 +179,19 @@ function dibujarCanvas(intentos) {
             dibujarBrazoIzquierdo();
             break;
 
-        case 5:
+        case 3:
             dibujarBrazoDerecho();
             break;
 
-        case 6:
+        case 2:
             dibujarPiernaIzquierda();
             break;
 
-        case 7:
+        case 1:
             dibujarPiernaDerecha();
             break;
 
-        case 8:
+        case 0:
             dibujarCarita();
             break;
     }
