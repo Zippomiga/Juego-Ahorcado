@@ -72,6 +72,7 @@ canvas {
     text-align: center;
     padding: 4px;
     background-color: white;
+    margin: auto;
 }
 
 .keywords li {
@@ -87,12 +88,10 @@ canvas {
     cursor: pointer;
 }
 
-
-
 .palabra {
-    display: block;
-    margin: 20px 0 0 20px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto auto 0 auto;
     font-size: 24px;
 }
 
@@ -162,30 +161,26 @@ footer {
 }
 
 .intentos-restantes {
-    margin: 16px 0 0 0;
+    margin: 16px 0;
     text-align: center;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 22px;
+    color: white;
+    font-size: 20px;
     line-height: 30px;
 }
 
 .campo-letras {
     width: 40px;
+    height: 45px;
     padding: 10px;
     margin: 1px;
     text-align: center;
-    border: none;
-    resize: none;
-    pointer-events: none;
+    background-color: white;
 }
 
 .palabra-ahorcado-bien {
     width: 40px;
     padding: 10px;
     text-align: center;
-    border: none;
-    resize: none;
-    pointer-events: none;
     background-color: rgb(160, 255, 160);
     color: rgb(0, 180, 0);
 }
@@ -194,9 +189,6 @@ footer {
     width: 40px;
     padding: 10px;
     text-align: center;
-    border: none;
-    resize: none;
-    pointer-events: none;
     background-color: rgb(255, 130, 130);
     color: rgb(200, 0, 0);
 }

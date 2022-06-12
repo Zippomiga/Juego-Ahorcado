@@ -10,7 +10,8 @@ function limpiarPantalla() {
     pincel.fillRect(0,0,600,400);
 }
 
-function dibujarBaseHorca() {    
+function dibujarBaseHorca() {
+    limpiarPantalla();  
     pincel.fillStyle = "white";
     pincel.fillRect(150, 365, 300, 20);
     pincel.fillStyle = "white";
@@ -115,6 +116,7 @@ function dibujarCarita() {
 }
 
 function dibujarAhorcado() {
+    limpiarPantalla();
     dibujarBaseHorca()
     dibujarHorca();
     dibujarCabeza();
@@ -127,6 +129,7 @@ function dibujarAhorcado() {
 }
 
 function dibujarSalvado() {
+    limpiarPantalla();
     dibujarCabeza();
     dibujarCuerpo();
     dibujarPiernaIzquierda()
@@ -192,7 +195,7 @@ function dibujarCanvas(intentosRestantes) {
             break;
 
         case 0:
-            dibujarCarita();
+            dibujarAhorcado();
             break;
     }
 }
