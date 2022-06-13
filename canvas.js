@@ -6,7 +6,7 @@ pincel.lineCap = "round";
 
 function limpiarPantalla() {
     pincel.clearRect(0,0,600,400);
-    pincel.fillStyle = "black";
+    pincel.fillStyle = "#2B3031";
     pincel.fillRect(0,0,600,400);
 }
 
