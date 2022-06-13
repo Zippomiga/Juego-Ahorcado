@@ -26,7 +26,7 @@ h1 {
 }
 
 canvas {
-    margin: 10px auto;
+    margin: 10px 0;
     border: 2px solid rgb(255, 172, 62);
 }
 
@@ -100,7 +100,7 @@ canvas {
 .palabra {
     display: flex;
     justify-content: center;
-    margin: 10px auto;
+    margin: 10px 0;
     font-size: 24px;
 }
 
