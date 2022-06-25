@@ -36,7 +36,7 @@ botonNuevaPalabra.addEventListener('click', function() {
 
 var botonRendirse = document.querySelector(".rendirse");
 botonRendirse.addEventListener('click', function() {
-    intentosRestantesHTML.innerHTML = "NOO mataste a Palito! <br> 😱😳";
+    intentosRestantesHTML.innerHTML = "NOO mataste a Palito! 😱😳";
     for(var i = 0; i < palabraSecreta.length; i++) {
         camposPalabra.childNodes[i].innerHTML = palabraSecreta[i];
         camposPalabra.childNodes[i].className = "palabra-ahorcado-mal";
@@ -57,14 +57,14 @@ function mostrarPalabraSecreta() {
     for(var i = 0; i < palabraSecreta.length; i++) {
         if(letrasPalabraSecreta == palabraSecreta.length) {
             camposPalabra.childNodes[i].className = "palabra-ahorcado-bien";
-            intentosRestantesHTML.innerHTML = "Salvaste a Palito. Muchas Gracias <br> 🤗🤗🤗";
+            intentosRestantesHTML.innerHTML = "Salvaste a Palito. Muchas Gracias 🤗🤗🤗";
             inhabilitar();
             dibujarSalvado();
         }
         if(intentosRestantes == 0) {
             camposPalabra.childNodes[i].innerHTML = palabraSecreta[i];
             camposPalabra.childNodes[i].className = "palabra-ahorcado-mal";
-            intentosRestantesHTML.innerHTML = "Palito fue ahorcado <br> 😰🥺";
+            intentosRestantesHTML.innerHTML = "Palito fue ahorcado 😰🥺";
             inhabilitar();
             dibujarAhorcado();
         }
@@ -89,6 +89,7 @@ function introducirLetras(key) {
         keyLetra.className = "letra-incorrecta";
         dibujarCanvas(intentosRestantes);
     }
+
     mostrarPalabraSecreta();
 }
 
@@ -97,6 +98,7 @@ var keyLetra = document.querySelectorAll(".letra");
     letra.addEventListener('click', function(event) {
         var key = event.target.textContent;
         introducirLetras(key);
+        filtro = filtro.replace(key, '');
     });
 });
 
