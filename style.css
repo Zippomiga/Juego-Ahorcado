@@ -4,6 +4,7 @@
 #body {
     background-color: rgb(70, 84, 88);
     font-family: 'Architects Daughter';
+    user-select: none;
 }
 
 h1 {
