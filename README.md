@@ -4,4 +4,4 @@ Han mandado a la horca a Palito. Por lo que más quieras, no dejes que Palito se
 
 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗
 
-https://zippomiga.github.io/Challenge-2-Ahorcado/
+https://zippomiga.github.io/Oracle-ONE__Challenge2-Ahorcado/
