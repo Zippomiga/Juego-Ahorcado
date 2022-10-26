@@ -1,4 +1,4 @@
-# Challenge-2-Ahorcado
+# Juego del Ahorcado
 
 Han mandado a la horca a Palito. Por lo que más quieras, no dejes que Palito sea ahorcado!
 
